@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { StyledEngineProvider } from '@mui/material/styles';
 import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 
@@ -8,8 +9,10 @@ const root = ReactDOM.createRoot(
 );
 root.render(
     <React.StrictMode>
-        <BrowserRouter>
-            <App />
-        </BrowserRouter>
+        <StyledEngineProvider injectFirst>
+            <BrowserRouter>
+                <App />
+            </BrowserRouter>
+        </StyledEngineProvider>
     </React.StrictMode>
 );

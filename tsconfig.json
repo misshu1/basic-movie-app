@@ -25,12 +25,21 @@
         "outDir": "build",
         "baseUrl": "src",
         "paths": {
-            "@models/*": ["src/models/*"],
-            "@utils/*": ["src/utils/*"],
-            "@hooks/*": ["src/hooks/*"],
-            "@components/*": ["src/components/*"]
+            "models/*": ["models/*"],
+            "utils/*": ["utils/*"],
+            "hooks/*": ["hooks/*"],
+            "components/*": ["components/*"],
+            "styles/*": ["styles/*"],
+            "pages/*": ["pages/*"],
+            "routes/*": ["routes/*"]
         }
     },
     "include": ["src"],
-    "exclude": ["**/*.spec.ts", "**/*.test.ts", "**/*.js"]
+    "exclude": [
+        "**/*.spec.ts",
+        "**/*.test.ts",
+        "**/*.js",
+        "node_modules",
+        "dist"
+    ]
 }

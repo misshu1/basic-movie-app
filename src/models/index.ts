@@ -1,13 +1,19 @@
-export enum STATUS {
-    IDLE = 'idle',
-    PENDING = 'pending',
-    RESOLVED = 'resolved',
-    REJECTED = 'rejected'
+export enum Status {
+    IDLE = 'IDLE',
+    LOADING = 'LOADING',
+    SUCCESS = 'SUCCESS',
+    ERROR = 'ERROR'
 }
 
-export interface ErrorResponse {
-    status_message: string;
-    status_code: number;
+export enum NotificationType {
+    INFO = 'INFO',
+    WARNING = 'WARNING',
+    SUCCESS = 'SUCCESS',
+    ERROR = 'ERROR'
+}
+
+export class ErrorResponse {
+    constructor(public status_message: string, public status_code: number) {}
 }
 
 export interface GetMovieResponse {
@@ -33,3 +39,15 @@ export interface Movie {
     video?: boolean;
     vote_average?: number;
 }
+
+// export class Test {
+//     static id: number;
+
+//     constructor(public id: number) {
+//         Test.id = id;
+//     }
+
+//     search = 'search/movie';
+//     static movie = `movie${Test.id}`;
+// }
+// console.log(new Test().search);

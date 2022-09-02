@@ -28,10 +28,11 @@
         "react-hooks/exhaustive-deps": "warn",
         "react/react-in-jsx-scope": "off",
         "@typescript-eslint/no-inferrable-types": "off",
+        "@typescript-eslint/no-explicit-any": "off",
         "react/prop-types": 0,
         "react/no-unescaped-entities": 0,
         "react/display-name": 0,
-        "no-unused-vars": 0,
+        "no-unused-vars": "off",
         "max-nested-callbacks": ["error", 3],
         "prefer-const": [
             "error",
