@@ -23,6 +23,12 @@ body {
 
 #root {
     width: 100%;
-    height: 100% ;
+    height: 100%;
+}
+
+#modal {
+    z-index: 200;
+    position: relative;
+    user-select: none;
 }
 `;

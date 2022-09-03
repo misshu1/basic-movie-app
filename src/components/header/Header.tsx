@@ -7,14 +7,10 @@ import { RoutePaths } from 'routes';
 export const Header = () => {
     return (
         <AppBar position='static'>
-            <Toolbar
-            //  disableGutters
-            >
+            <Toolbar sx={{ height: 64 }}>
                 <Button
                     component={Link}
                     to={RoutePaths.root}
-                    // key={page}
-                    // onClick={handleCloseNavMenu}
                     sx={{ my: 2, color: 'white', display: 'block' }}
                 >
                     search
@@ -22,8 +18,6 @@ export const Header = () => {
                 <Button
                     to={RoutePaths.favorites}
                     component={Link}
-                    // key={page}
-                    // onClick={handleCloseNavMenu}
                     sx={{ my: 2, color: 'white', display: 'block' }}
                 >
                     favorites

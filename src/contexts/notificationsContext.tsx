@@ -1,11 +1,4 @@
-import {
-    createContext,
-    ReactNode,
-    useCallback,
-    useContext,
-    useMemo,
-    FC
-} from 'react';
+import { createContext, ReactNode, useCallback, useContext, FC } from 'react';
 import { useSnackbar } from 'notistack';
 import { NotificationType } from 'models';
 import { Notification } from 'components';
@@ -103,17 +96,10 @@ export const NotificationsProvider: FC<NotificationsProviderProps> = ({
         [closeSnackbar, enqueueSnackbar]
     );
 
-    const notificationsValue = useMemo(() => {
-        return {
-            showSuccess,
-            showError,
-            showWarning,
-            showInfo
-        };
-    }, [showError, showInfo, showSuccess, showWarning]);
-
     return (
-        <NotificationsContext.Provider value={notificationsValue}>
+        <NotificationsContext.Provider
+            value={{ showSuccess, showError, showWarning, showInfo }}
+        >
             {children}
         </NotificationsContext.Provider>
     );

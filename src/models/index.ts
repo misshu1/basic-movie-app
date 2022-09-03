@@ -13,14 +13,17 @@ export enum NotificationType {
 }
 
 export class ErrorResponse {
-    constructor(public status_message: string, public status_code: number) {}
+    constructor(public status_message: string, public status_code: number) {
+        this.status_code = status_code;
+        this.status_message = status_message;
+    }
 }
 
 export interface GetMovieResponse {
-    results?: Movie[];
-    page?: number;
-    total_results?: number;
-    total_pages?: number;
+    results: Movie[];
+    page: number;
+    total_results: number;
+    total_pages: number;
 }
 
 export interface Movie {
@@ -40,14 +43,14 @@ export interface Movie {
     vote_average?: number;
 }
 
-// export class Test {
-//     static id: number;
+export enum SortBy {
+    NAME_ASCENDING = 'Name Ascending',
+    NAME_DESCENDING = 'Name Descending',
+    RELEASE_DATE_ASCENDING = 'Release Date Ascending',
+    RELEASE_DATE_DESCENDING = 'Release Date Descending'
+}
 
-//     constructor(public id: number) {
-//         Test.id = id;
-//     }
-
-//     search = 'search/movie';
-//     static movie = `movie${Test.id}`;
-// }
-// console.log(new Test().search);
+export interface Pagination {
+    totalPages: number;
+    currentPage: number;
+}
