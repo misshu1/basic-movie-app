@@ -6,7 +6,7 @@ import { RoutePaths } from 'routes';
 
 export const Header = () => {
     return (
-        <AppBar position='static'>
+        <AppBar position='static' sx={{ background: '#916D61' }}>
             <Toolbar sx={{ height: 64 }}>
                 <Button
                     component={Link}

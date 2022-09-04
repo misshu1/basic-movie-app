@@ -43,7 +43,8 @@ export const Favorites = () => {
                 gridAutoRows: 'minmax(16rem, 18rem)',
                 justifyContent: 'center',
                 overflow: 'auto',
-                flex: 1
+                flex: 1,
+                height: 'calc(100% - 64px)'
             }}
         >
             {favorites.map((movie) => (

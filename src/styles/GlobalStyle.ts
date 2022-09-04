@@ -19,6 +19,7 @@ body {
     padding: 0;
     height: 100%;
     width: 100%;
+    background: #f0ead6;
 }
 
 #root {

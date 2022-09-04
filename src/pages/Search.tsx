@@ -253,7 +253,7 @@ export const Search = () => {
 
     return (
         <SearchContainer>
-            <Box sx={{ p: 2, display: 'flex', gap: 2 }}>
+            <Box sx={{ p: 2, display: 'flex', gap: 2, flexWrap: 'wrap' }}>
                 <Autocomplete
                     options={keywordsData?.results ? keywordsData.results : []}
                     getOptionLabel={(option) => option.name}

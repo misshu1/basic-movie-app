@@ -13,8 +13,8 @@ export const Container = styled.div<ContainerProps>`
     height: 100%;
     box-shadow: 0px 0px 4px -2px #202020;
     border-radius: 0.5rem;
-    background: #16192e;
-    color: #d6d8de;
+    background: #e0dad6;
+    color: #58332d;
     padding: 1rem;
     position: relative;
 
