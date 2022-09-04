@@ -30,7 +30,14 @@ export const Movie: FC<MovieProps> = ({
                 }
             >
                 <FavoriteIcon
-                    icon={['fas', 'heart-circle-plus']}
+                    icon={[
+                        'fas',
+                        `${
+                            isFavorite
+                                ? 'heart-circle-minus'
+                                : 'heart-circle-plus'
+                        }`
+                    ]}
                     size='2xl'
                     onClick={handleToggleFavorites}
                     color={isFavorite ? '#ff605c' : '#00ca4e'}
