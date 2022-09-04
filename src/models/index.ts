@@ -26,6 +26,18 @@ export interface GetMovieResponse {
     total_pages: number;
 }
 
+export interface Keyword {
+    id: number;
+    name: string;
+}
+
+export interface GetKeywordResponse {
+    results: Keyword[];
+    page: number;
+    total_results: number;
+    total_pages: number;
+}
+
 export interface Movie {
     poster_path?: string | null;
     adult?: boolean;
@@ -44,10 +56,20 @@ export interface Movie {
 }
 
 export enum SortBy {
-    NAME_ASCENDING = 'Name Ascending',
-    NAME_DESCENDING = 'Name Descending',
-    RELEASE_DATE_ASCENDING = 'Release Date Ascending',
-    RELEASE_DATE_DESCENDING = 'Release Date Descending'
+    'popularity.asc' = 'Popularity Ascending',
+    'popularity.desc' = 'Popularity Descending',
+    'release_date.asc' = 'Release Date Ascending',
+    'release_date.desc' = 'Release Date Descending',
+    'revenue.asc' = 'Revenue Ascending',
+    'revenue.desc' = 'Revenue Descending',
+    'primary_release_date.asc' = 'Primary Release Date Ascending',
+    'primary_release_date.desc' = 'Primary Release Date Descending',
+    'original_title.asc' = 'Title Ascending',
+    'original_title.desc' = 'Title Descending',
+    'vote_average.asc' = 'Vote Average Ascending',
+    'vote_average.desc' = 'Vote Average Descending',
+    'vote_count.asc' = 'Vote Count Ascending',
+    'vote_count.desc' = 'Vote Count Descending'
 }
 
 export interface Pagination {

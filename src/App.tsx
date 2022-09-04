@@ -4,7 +4,7 @@ import { GlobalStyle } from 'styles';
 import { Header } from 'components';
 import { RoutesApp } from 'routes';
 import { NotificationsProvider } from 'contexts';
-import './fortawesome';
+import './fontawesome';
 
 function App() {
     return (
