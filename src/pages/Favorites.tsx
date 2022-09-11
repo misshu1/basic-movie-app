@@ -44,7 +44,9 @@ export const Favorites = () => {
                 justifyContent: 'center',
                 overflow: 'auto',
                 flex: 1,
-                height: 'calc(100% - 64px)'
+                height: 'calc(100% - 64px)',
+                maxWidth: '80rem',
+                mx: 'auto'
             }}
         >
             {favorites.map((movie) => (

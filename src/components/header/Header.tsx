@@ -6,7 +6,10 @@ import { RoutePaths } from 'routes';
 
 export const Header = () => {
     return (
-        <AppBar position='static' sx={{ background: '#916D61' }}>
+        <AppBar
+            position='static'
+            sx={{ background: '#916D61', maxWidth: '80rem', mx: 'auto' }}
+        >
             <Toolbar sx={{ height: 64 }}>
                 <Button
                     component={Link}
