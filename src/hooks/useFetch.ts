@@ -8,6 +8,7 @@ interface StateType<T> {
     error?: string;
 }
 
+const controller = new AbortController();
 export const useFetch = <T>(
     url: string,
     shouldFetch: boolean = true,
@@ -22,7 +23,7 @@ export const useFetch = <T>(
         setState({ status: Status.LOADING });
 
         try {
-            const data = await fetch(url);
+            const data = await fetch(url, { signal: controller.signal });
             const dataJSON = await data.json();
             if (dataJSON.success === false) {
                 throw new ErrorResponse(
@@ -67,6 +68,11 @@ export const useFetch = <T>(
         fetchData().then(
             (data) => data && onSuccessCallback && onSuccessCallback(data)
         );
+
+        return () => {
+            // cancel the previous request if the URL changes before getting response
+            controller.abort();
+        };
     }, [url, shouldFetch, fetchData, onSuccessCallback]);
 
     return state;
